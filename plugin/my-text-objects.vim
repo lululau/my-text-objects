@@ -9,13 +9,12 @@ function! s:SelectOnlyAlphanum(type)
   let &l:iskeyword = saved_iskeyword
 endfunction
 
-vnoremap <silent> io :<C-U>silent! call s:SelectOnlyAlphanum("o")<CR>
-vnoremap <silent> ao :<C-U>silent! call s:SelectOnlyAlphanum("o")<CR>
+vnoremap <silent> io :<C-U>silent! call <SID>SelectOnlyAlphanum("o")<CR>
+vnoremap <silent> ao :<C-U>silent! call <SID>SelectOnlyAlphanum("o")<CR>
 omap io :normal vio<CR>
 omap ao :normal vao<CR>
 
-vnoremap <silent> iO :<C-U>silent! call s:SelectOnlyAlphanum("O")<CR>
-vnoremap <silent> aO :<C-U>silent! call s:SelectOnlyAlphanum("O")<CR>
+vnoremap <silent> iO :<C-U>silent! call <SID>SelectOnlyAlphanum("O")<CR>
+vnoremap <silent> aO :<C-U>silent! call <SID>SelectOnlyAlphanum("O")<CR>
 omap iO :normal viO<CR>
 omap aO :normal vaO<CR>
-
