@@ -69,9 +69,9 @@ endfunction
 " Text object for lines which have same first non-white character/word
 function! s:SelectSameBeginningLines(word)
   if a:word ==# 'a'
-    call <SID>SelectSameMatchLines('^\s*\w\+')
+    call s:SelectSameMatchLines('^\s*\w\+')
   else
-    call <SID>SelectSameMatchLines('^\s*\w')
+    call s:SelectSameMatchLines('^\s*\w')
   endif
 endfunction
 
@@ -87,9 +87,9 @@ omap a& :normal Va&<CR>
 " Text object for lines which have same last non-white character/word
 function! s:SelectSameEndLines(word)
   if a:word ==# 'a'
-    call <SID>SelectSameMatchLines('\w\+\s*$')
+    call s:SelectSameMatchLines('\w\+\s*$')
   else
-    call <SID>SelectSameMatchLines('\w\s*$')
+    call s:SelectSameMatchLines('\w\s*$')
   endif
 endfunction
 
